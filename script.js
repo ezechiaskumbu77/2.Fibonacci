@@ -1,15 +1,19 @@
-var output = [];
-var n;
-
 function fibonacciGenerator(n) {
-    for (var i = 1; i < n; n++) {
-        n = n + (n - 1);
-        if (n === 0) {
-            console.log(output.push[0]);
-        } else if (n === 1) {
-            cosole.log(output.push[0]);
-        } else
-            console.log(output.push[n]);
-        console.log(output);
+    var output = [];
+    if (n === 0) {
+        output = [0];
+    } else if (n === 1) {
+        output = [0];
+    } else if (n === 2) {
+        output = [0, 1];
+    } else {
+        output = [0, 1];
+        for (let i = 2; i < n; i++) {
+            output.push(output[output.lenght - 2] + output[output.lenght - 1]);
+        }
+
     }
+    return output;
 }
+output = fibonacciGenerator(1);
+console.log(output);
